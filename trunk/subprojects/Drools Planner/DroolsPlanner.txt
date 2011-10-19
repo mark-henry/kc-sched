@@ -1,0 +1,23 @@
+Nathaniel Chamness
+
+Drools Planner
+
+
+Drools Planner is an open-source java framework developed by the JBoss Community that optimizes automated planning.
+
+
+Good Features:
+- Supports a wide variety of scheduling/planning problems
+- Open-source makes it easy to implement and expand upon
+- Lots of documentation on the framework
+- Community that developed is actively improving
+- Best optimizes planning problems with the best algorithms known
+
+
+Bad Features:
+- Example implementation of framework is very confusing and looks horrible, but it is just one crude implementation
+- Cannot use if just a casual user, have to know how to use Java frameworks
+
+
+Missing Features:
+- Would be nice if it was implemented as a complete package
