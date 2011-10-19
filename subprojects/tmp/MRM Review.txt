@@ -1,0 +1,19 @@
+1.5.? Meeting Room Management Scheduling Software
+
+While not exactly in the same category of software as our scheduler, Meeting Room Manager can inform our project.
+
+Good Features:
+
+Browser-based; anyone can log in from anywhere.
+Clean and intuitive interface
+It is possible to make reservations based on available resources, such as whether a room has a projector or whiteboard.
+It is possible for the user to add custom metadata for rooms
+Any changes are automatically broadcast to all concerned
+
+Bad Features:
+
+None known
+
+Missing Features:
+
+This software was not designed with the exact same purposes in mind as ours, and so does not heuristically generate a schedule based on given guidelines
