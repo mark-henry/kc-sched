@@ -10,6 +10,8 @@ public abstract class KCExport {
    // creates a PDF of the schedule
    public abstract void exportToPDF(KCSchedule schedule);
    
+   // change directories that file is exporting to.
+   public abstract void changeDirecttory();
    
    
    
