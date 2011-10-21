@@ -5,6 +5,8 @@ public abstract class KCCourse {
 	Collection<String> PreReqs;
 	Collection<String> ConCurrent;
 	Collection<KCClassRoomTools> NecessaryTools;
+	int NumUnitsLecture;
+	int NumUnitsLab;
 	
 
 }
