@@ -26,5 +26,4 @@ public abstract class KCDataTab {
 	 */
 	public abstract void bringToForeground();
 	
-	
 }

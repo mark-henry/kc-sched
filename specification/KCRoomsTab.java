@@ -28,6 +28,6 @@ public abstract class KCRoomsTab {
 	 */
 	public abstract void sortColumn();
 	
-	public abstract Collection<KCRoom> getInstructors();
+	public abstract Collection<KCRoom> getRooms();
 	
 }

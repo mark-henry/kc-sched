@@ -28,6 +28,6 @@ public abstract class KCCoursesTab {
 	 */
 	public abstract void sortColumn();
 	
-	public abstract Collection<KCCourse> getInstructors();
+	public abstract Collection<KCCourse> getCourses();
 	
 }
