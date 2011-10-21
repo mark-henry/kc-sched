@@ -1,5 +1,5 @@
 import java.util.*;
-public abstract class KCEditScheduleUI {
+public abstract class KCGenerateScheduleUI {
 
 	public abstract class KCComponents{
 		/*data fields for schedule generation*/
@@ -8,7 +8,7 @@ public abstract class KCEditScheduleUI {
 		Collection<KCCourse> courses;
 		/*will be called in default constructor, will import all of the type that
 		are marked as "active" or "current"*/
-		public abstract int ImportAllCurrentType(void Type);
+		public abstract int ImportAllCurrentType(Object Type);
 	}
 	
 	public abstract class KCPreferences{
