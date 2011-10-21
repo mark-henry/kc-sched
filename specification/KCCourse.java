@@ -1,5 +1,10 @@
 import java.util.*;
 public abstract class KCCourse {
-	String classNum;
-	Collection<String> preReqs;
+	String DepartmentName;
+	String ClassNum;
+	Collection<String> PreReqs;
+	Collection<String> ConCurrent;
+	Collection<KCClassRoomTools> NecessaryTools;
+	
+
 }
