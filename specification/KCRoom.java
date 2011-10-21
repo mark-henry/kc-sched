@@ -1,6 +1,9 @@
 import java.util.*;
 public abstract class KCRoom {
-	String BuildingNumber;
-	String RoomNumber;
+	int BuildingNumber;
+	int RoomNumber;
+        int Capacity;
+        boolean Lab;
+        int stations;
 	Collection<KCClassRoomTools> ToolsInRoom;
 }
