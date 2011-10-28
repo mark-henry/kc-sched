@@ -8,7 +8,7 @@
 
 import java.util.*;
 public abstract class KCEditTab {
-	Collection<Section> sections;
+	Collection<KCSection> sections;
 	
 	// Adds a section to the grid
 	public abstract void addSection();
