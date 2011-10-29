@@ -1,5 +1,18 @@
 import java.util.*;
 public abstract class KCGenerateScheduleUI {
+	
+	/* generates a schedule based on the inputted instructors, rooms, courses,
+	preferences, and conflict resoultion settings */
+	public abstract KCSchedule Generate(Collection<KCInstructor> instructors,
+										Collection<KCRoom> rooms,
+										Collection<KCCourse> courses,
+										Collection<KCRule> conflicts,
+										Collection<KCRule> preferences);
+
+	/* verifies validity of schedule. May be called in Generate function, or in
+	the edit schedule tab as well */
+	public abstract boolean IsScheduleValid(KCSchedule schedule);
+
 
 	public abstract class KCComponents{
 		/*data fields for schedule generation*/
@@ -23,23 +36,10 @@ public abstract class KCGenerateScheduleUI {
 		Collection<KCRule> conflicts;
 		/* Verifies the program understands the rule as written by user */
 		public abstract boolean IsRuleValid(KCRule conflict);
-	}
-	
-	public abstract class KCGenerate{
-		/* generates a schedule based on the inputted instructors, rooms, courses,
-		preferences, and conflict resoultion settings */
-		public abstract KCSchedule Generate(Collection<KCInstructor> instructors,
-											Collection<KCRoom> rooms,
-											Collection<KCCourse> courses,
-											Collection<KCRule> conflicts,
-											Collection<KCRule> preferences);
-		/* deals with conflicting sections as defined in conflict settings*/ 
+			/* deals with conflicting sections as defined in conflict settings*/ 
 		public abstract int DisplayConflict(Collection<KCSection> sections,Collection<KCRule> conflicts);
-		/* verifies validity of schedule. May be called in Generate function, or in
-		the edit schedule tab as well */
-		public abstract boolean IsScheduleValid(KCSchedule schedule);
-	
 	}
 	
+
 }
 
