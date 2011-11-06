@@ -8,69 +8,99 @@
 </head><body>
 
 <h2> 2.2.2  Add / Edit Instructor </h2>
-<hr/>
-Old Versions:<br>
-<a href="add-edit_instructor_preferences_v1.html">Version 1</a>
-<hr/>
 
 
-<h2>Adding a Professor</h2>
+<hr />
+<h2>Instructor Tab Overview</h2>
 <p>
-	This is a view that is available only to a system admin.  It will allow the user to see all
-	of the teachers, and their related info.  Each column may be sorted in alpabetical order.  The columns
-	on the left have different views of data: professors, rooms, and courses.  This will be the 
-	primary way of viewing teachers in the database.  
+	This is a view that is available only to a system admin.  It will allow the admin to see all
+	of the teachers, and their related info.  The window on the left contains every instructor's name
+	that is in the database, sorted in alphabetical order (by last name).  When selecting an instructor 
+	on the left, it becomes highlighted (like we see below for "Bellardo, John").  When selecting an
+	instructor, the window on the right displays all that professors information.  All information 
+	is displayed in <strong>editable</strong> text-fields.
 </p>
 
 <hr /><br />
 <div align="center">
-<a href="../images/add_teacher_main.jpg"><img src="../images/add_teacher_main.jpg" width="600" height="400"/></a>
+<a href="../images/instructor_overview.png"><img src="../images/instructor_overview.png" width="800" height="450"/></a>
 
-<p>Figure 2.  Teacher Tab</p>
+<p>Figure 1.  Instructors Tab (overview)</p>
 </div>
-<hr /><br />
 
-<p>
-	When you click the "+" button on the bottom, a new dialogue pops up to add a teacher (figure 3).
-</p>
-<hr /><br />
 <div align="center">
-<a href="../images/add_teacher_dialogue.jpg"><img src="../images/add_teacher_dialogue.jpg" width="600" height="400"/></a>
+<a href="../images/instructor_overview2.png"><img src="../images/instructor_overview2.png" width="800" height="450"/></a>
 
-<p>Figure 3.  Add Teacher Pop Up Dialogue</p>
+<p>Figure 2.  Instructors Tab (overview)</p>
 </div>
-<br /><hr />
+<hr />
 
-<ul>
-	<li>First Name - Text field for teachers first name. </li>
-	<li>Last Name - Text field for teachers last name. </li>
-	<li>Middlie Initial - Text field for teachers middle initial. </li>
-	<li>Phone Number - Text field for teachers phone number. </li>
-	<li>Email - Text field for teachers email, must be valid cal poly email.</li>
-	<li>Picture - Select a file from computer to upload for teachers picture. (figure 5) </li>
-	<li>Department - Drop down menu of all available departments to choose from. (figure 4)</li><br />
+<h2>Modifying an Instructor</h2>
+<p>
+	To modify an instructor's information, in this case professor Bellardo's information, simply select
+	Bellardo from the left window to pull up his information.  Once his information is displayed in the 
+	right window, all the text-fields are editable.  One can simply click inside the phone number field to
+	change / modify.  Once modifications are made, a user can "commit changes" to write the new values
+	to the database, or "restore" the text fields to the previous values.<br /><br />
+	Each field has the following constraints:
+	<ol>
+		<li>First Name: Must contain ONLY alphabetical characters (a-z and A-Z).  Limited to 30 characters.</li>
+		<li>Last Name: Same as first name.</li>
+		<li>Phone Number: Must contain ONLY numerical characters and the dash character.  (1-9 and '-') Limited to 12 characters.</li>
+		<li>Office Number: Can contain alphanumeric characters.  Limited to 10 characters.</li>
+		<li>Department: Must contain ONLY alphabetical characters.  Limited to 100 characters.</li>
+		<li>Email Address:  Must be a valid email address, and properly formatted (name@domain.com)</li>
+	</ol>
 	
-	<li>The "cancel" button will cancel this whole operation. </li>
-	<li>The "reset" button will clear all of the input fields. </li>
-	<li>The "Add Teacher" button will add the teacher to the list of teachers. </li>
-</ul>
-
+	**Any violation of these restrictions results in the error/ alert message shown in figure ...
+	The alert is triggered when the user clicks off the text-field they just modified.  After the error
+	message is viewed and the user clicks "ok," the text-field in violation will have the cursor inside,
+	ready to edit.
+</p>
 <hr /><br />
 <div align="center">
-<a href="../images/add_teacher_dialogue_drop.jpg"><img src="../images/add_teacher_dialogue_drop.jpg" width="600" height="400"/></a>
+<a href="../images/instructor_edit_1.png"><img src="../images/instructor_edit_1.png" width="800" height="450"/></a>
 
-<p>Figure 4.  Drop down menu of all the possible departments a teacher can belong to.</p>
+<p>Figure 3. Editing the phone number text-field.</p>
+</div>
+
+<div align="center">
+<a href="../images/instructor_edit_2.png"><img src="../images/instructor_edit_2.png" width="800" height="450"/></a>
+
+<p>Figure 4. Editing the phone number text-field.</p>
+</div>
+
+<div align="center">
+<a href="../images/instructor_edit_error.png"><img src="../images/instructor_edit_error.png" width="800" height="450"/></a>
+
+<p>Figure 5. Error message generated when violating the phone number constraint.</p>
 </div>
 <br /><hr />
 
-<p>The drop down menu is useful for limiting the values that can be plugged into the text field.  These
-will be pre-populated with values we give them.</p>
+<h2>Adding an Instructor</h2>
+
+<p>
+	To add an instructor, one would click the "+" button at the bottom of the left window, as shown in figure 6.
+	Once the user clicks this button, the window on the right will display a blank set of information 
+	corresponding the new instuctor just added.  One would fill these text-fields in as appropriate, and 
+	when finished, one would click the "commit changes" button to update the information of the new instructor.
+	Once a user clicks the "commit changes" button, the instructor name will update to the new name.
+</p>
 
 <hr /><br />
 <div align="center">
-<a href="../images/add_teacher_browser.jpg"><img src="../images/add_teacher_browser.jpg" width="600" height="400"/></a>
+<a href="../images/instructor_add_new.png"><img src="../images/instructor_add_new.png" width="800" height="450"/></a>
 
-<p>Figure 5.  Pop up that brings up a file system viewer to select image to upload</p>
+<p>Figure 6.  After clicking the "+" button, this is what the interface will look like.</p>
+</div>
+
+<div align="center">
+<a href="../images/instructor_add_commit.png"><img src="../images/instructor_add_commit.png" width="800" height="450"/></a>
+
+<p>
+Figure 7.  After clicking the "commit changes" button, the window on the left is updated to hold 
+the full name of what was added in the right window.
+</p>
 </div>
 <br /><hr />
 
