@@ -19,7 +19,21 @@ public abstract class KCRoomsTab {
 	 * for all the room information.  It will then 
 	 * add the room to the database. 
 	 */
-	public abstract void addRoom();
+	public abstract void addRoom(KCRoom room);
+
+	/*
+	 * Triggered when a user clicks the "-" button.
+	 * This will pop up a dialogue box that will ask the user
+	 * to confirm that they want to completely remove this entry.
+	 */
+	public abstract void deleteRoom(KCRoom room);
+	
+	/*
+	 * Triggered when a user clicks the "edit" button.
+	 * This will fill all the fields with the current information
+	 * for the selected room so that the database may be edited.
+	 */
+	public abstract void editRoom(KCRoom room);
 	
 	/*
 	 * This is triggered when a user clicks the column heading. 
