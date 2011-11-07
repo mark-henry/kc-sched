@@ -12,13 +12,13 @@ public abstract class KCGenerateSchedule {
 	/*Created by Acrafts 10/20*/
 	/* verifies validity of schedule. May be called in Generate function, or in
 	the edit schedule tab as well */
-	public abstract boolean IsScheduleValid(KCSchedule schedule);
+	public abstract boolean IsScheduleValid(KCSchedule Schedule);
 	/* Added by cgaydosh 11/6 */
-	public abstract void DisplayConflict(KCConflict conflict);
+	public abstract void DisplayConflict(KCConflict Conflict);
 	public abstract void DismissConflict(Collection<KCConflict> ConflictList, 
-	                                     KCConflict conflict);
+	                                     KCConflict Conflict);
    public abstract void ResolveConflictLater(Collection<KCConflict> ConflictList,
-                                             KCConflict conflict);
+                                             KCConflict Conflict);
 
 	/*Created by Acrafts 10/20*/
 	public abstract class KCComponents{
