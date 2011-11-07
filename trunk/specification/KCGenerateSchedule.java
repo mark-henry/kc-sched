@@ -5,7 +5,7 @@ public abstract class KCGenerateSchedule {
 	/*Created by Acrafts 10/20*/
 	/* generates a schedule based on the inputted instructors, rooms, courses,
 	preferences, and conflict resoultion settings */
-	public abstract KCSchedule Generate(Collection<KCInstructor> Instructors,
+	public abstract void KCSchedule_Generate(Collection<KCInstructor> Instructors,
 										Collection<KCRoom> Rooms,
 										Collection<KCCourse> Courses,
 										Collection<KCRule> Preferences);
@@ -13,6 +13,12 @@ public abstract class KCGenerateSchedule {
 	/* verifies validity of schedule. May be called in Generate function, or in
 	the edit schedule tab as well */
 	public abstract boolean IsScheduleValid(KCSchedule schedule);
+	/* Added by cgaydosh 11/6 */
+	public abstract void DisplayConflict(KCConflict conflict);
+	public abstract void DismissConflict(Collection<KCConflict> ConflictList, 
+	                                     KCConflict conflict);
+   public abstract void ResolveConflictLater(Collection<KCConflict> ConflictList,
+                                             KCConflict conflict);
 
 	/*Created by Acrafts 10/20*/
 	public abstract class KCComponents{
@@ -24,13 +30,21 @@ public abstract class KCGenerateSchedule {
 		are marked as "active" or "current"*/
 		public abstract int ImportAllCurrentType(Object Type);
 		public abstract int ImportSelected(Object Type);
+		/* added by cgaydosh 11/6 */
+		public abstract int RemoveObjectFromList(Object Type); //when user clicks minus button
 	}
 	/*removed KCConflict class 11/6/11 by acrafts*/
+	/* added KCConflict class 11/6/11 by cgaydosh */
+	public abstract class KCConflict {
+      Collection<KCRule> Violated;
+	}
 	
 	/*Created by Acrafts 10/20*/
 	public abstract class KCPreferences{
 		/* preferences to be considered while generating schedules*/
 		Collection<KCRule> Preferences;
+		/* added by cgaydosh 11/6 */
+		public abstract int UpdatePreference(KCRule Pref);
 	
 	}
 	
