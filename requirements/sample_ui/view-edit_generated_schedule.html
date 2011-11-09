@@ -1,11 +1,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
 <HEAD>
-	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
 	<TITLE>view-edit_generated_schedule</TITLE>
-	<META NAME="GENERATOR" CONTENT="LibreOffice 3.4  (Win32)">
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.2  (Unix)">
 	<META NAME="CREATED" CONTENT="0;0">
-	<META NAME="CHANGED" CONTENT="20111107;17330285">
+	<META NAME="CHANGED" CONTENT="20111109;12083700">
 	<STYLE TYPE="text/css">
 	<!--
 		H2.cjk { font-family: "SimSun" }
@@ -14,48 +14,68 @@
 	</STYLE>
 </HEAD>
 <BODY LANG="en-US" DIR="LTR">
-<H1>2.2.6 Edit Tab</FONT></H1>
+<H1>2.2.6 Edit Tab</H1>
 <HR>
-<H2 CLASS="western">2.2.6.1 Edit
-Tab Overview</H2>
-<P>The Edit tab is where the user
-will spend the bulk of their time. Available to admins only, the
-tab's primary function is to allow for rearranging and rescheduling
-of Sections in the Schedule.</P>
-<P>The bulk of the tab's area is
-occupied by a grid that displays the Schedule. Each Section is
-represented by a small colored square. Each square also has a Pin
-button on it, explained further along in this document.</FONT></P>
-<P>[Image: general overview of
-the Edit tab. Various Sections are scattered about the grid as examples. ]</P>
-<P>The horizontal axis is always time. The vertical axis represents
-Rooms by default, but the user can change this to Courses or
-Instructors by clicking on a series of tabs arranged vertically down
-the left-hand side.</P>
+<H2 CLASS="western">2.2.6.1 The Edit Tab View</H2>
+<P>The Edit tab is where the user will spend the bulk of their time.
+Available to admins only, the tab's primary function is to allow for
+rearranging and rescheduling of Sections in the Schedule.</P>
+<P>The bulk of the tab's area is occupied by a grid that displays the
+Schedule. Each Section is represented by a small colored square. Each
+square also has a Pin button on it, explained further along in this
+document. As the user moves their mouse over the grid, the time block
+they are currently hovering over, whether it contains a Section or is
+blank, is highlighted with a bold rectangle.</P>
+<P>[Image: general overview of the Edit tab. Various Sections are
+scattered about the grid as examples. ]</P>
+<P>The horizontal axis is always time. As the user moves their mouse
+over the grid, the time block the cursor is currently on is displayed
+on the horizontal axis.</P>
+<P>The vertical axis represents Rooms by default, but the user can
+change this to Courses or Instructors by clicking on a series of tabs
+arranged vertically down the left-hand side.</P>
 <P>[Two images demonstrating the Course and Instructor views]</P>
 <P>The Error list pops out of the right-hand side of the tab if there
 are Errors to display; otherwise, it is hidden.</P>
 <P>[Image: the Error list, popped out, with an Error listed]</P>
-<P>To change the scheduling of a Section, the user simply clicks and
-drags the Section into a new time slot. To edit the Section, the user
-can double-click the Section.</P>
 <P>Information for a section is displayed when the cursor is on a
 Section. The Course, Instructor, and Room is displayed in this
 pop-up.</P>
-<P>[Image: the information pop-up. It is a simple speech bubble off to one side;
-data for the Section are displayed]</P>
-<H2>2.2.6.2 Refining a Schedule: Pin &amp; Generate</H2>
-<P>The Pin &amp; Generate loop is an integral part of the KCSched
+<P>[Image: the information pop-up. It is a simple speech bubble off
+to one side; the Section's properties are displayed]</P>
+<H2 CLASS="western">2.2.6.2 Adding, Editing and Deleting Sections</H2>
+<P>To edit a section, the user double-clicks the section's square. To
+create a section, the user double-clicks a blank space on the
+Schedule. Both these actions bring the user to the Edit Section
+screen. When creating a new section, the fields in the Edit Section
+screen will be blank; when editing an existing section, the fields
+will be populated with the current Section properties.</P>
+<P>[Image: the Edit Section screen. It occupies the entire Edit Tab,
+and has fields for the four Section properties. These fields are
+currently blank]</P>
+<P>Here, the user can change all aspects of a Section: the Time,
+Instructor, Course and Room.</P>
+<P>[Image: the Edit Section screen. Now all fields are filled in with
+data]</P>
+<P>To save changes, the user clicks the Save button. To cancel
+changes without saving, the user clicks the Cancel button.</P>
+<P>To delete the Section, the user clicks the Delete Section button.
+After confirming the deletion, the Section will be deleted.</P>
+<P>Once Save, Cancel or Delete is selected, the user will be returned
+to the main Edit Tab view.</P>
+<H2 CLASS="western">2.2.6.3 Refining a Schedule: Pin &amp; Generate</H2>
+<P>The Pin &amp; Generate loop is an integral part of the KCScheduler
 tool. Because schedule that is generated by software will rarely be
 ideal, the schedule must be refined by the user. The Pin &amp;
-Generate method offered by the KCSched tool is an intuitive way to
-iteratively improve the Schedule.</P>
+Generate method offered by the KCScheduler tool is an intuitive way
+to iteratively improve the Schedule.</P>
 <P>First, the user Generates a Schedule (see <A HREF="generate_schedule.html">2.2.5
 Generate Schedule</A>). This will take the user to the Edit tab,
-where they will discover the inadequacies of the Schedule. However,
-some elements of the Schedule will be suitable. The user will then
-Pin the sections they find acceptable. Pinned Sections will not be
-touched by the Schedule Generator.</P>
+where they will probably discover some inadequacies in the generated
+the Schedule. Hopefully, however, some elements of the Schedule will
+be suitable. The user will then Pin the sections they find
+acceptable. Pinned Sections will not be touched by the Schedule
+Generator.</P>
 <P>Then, the user will run the Schedule Generator again. New
 constraints may be put into place on this point. However, even if the
 constraints are not changed, the Schedule Generator will scramble the
