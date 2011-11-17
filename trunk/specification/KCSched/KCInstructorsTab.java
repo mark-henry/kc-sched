@@ -8,9 +8,10 @@
  * admin, instructors do not have access to this view.
  *
  */
+package KCSched;
 
 import java.util.*;
-public abstract class KCInstructorsTab {
+public abstract class InstructorsTab {
 	Collection<KCInstructor> instructorsList;
 	
 	/*
@@ -28,6 +29,6 @@ public abstract class KCInstructorsTab {
 	 */
 	public abstract void sortColumn();
 	
-	public abstract Collection<KCInstructor> getInstructors();
+	public abstract Collection<Instructor> getInstructors();
 	
 }

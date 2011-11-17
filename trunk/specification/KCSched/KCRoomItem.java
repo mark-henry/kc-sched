@@ -1,5 +1,6 @@
+package KCSched;
 
-public abstract class KCRoomItem {
+public abstract class RoomItem {
    int buildingNumber;
    int roomNumber;
    boolean lab;

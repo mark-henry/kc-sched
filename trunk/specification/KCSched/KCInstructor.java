@@ -1,5 +1,7 @@
 /*Created by Acrafts 10/20*/
-public abstract class KCInstructor {
+package KCSched;
+
+public abstract class Instructor {
 	String Name;
 	int Priority;
 	

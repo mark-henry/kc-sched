@@ -9,15 +9,16 @@
  * the corresponding data-view to the foreground.
  *
  */
+package KCSched;
 
 import java.util.*;
 
-public abstract class KCDataTab {
+public abstract class DataTab {
 	String userName;
 
-	KCInstructorsTab instructorsTab;
-	KCCoursesTab coursesTab;
-	KCRoomsTab roomsTab;
+	InstructorsTab instructorsTab;
+	CoursesTab coursesTab;
+	RoomsTab roomsTab;
 	
 	/*
 	 * Brings the selected tab to the foreground
