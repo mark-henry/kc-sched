@@ -1,11 +1,13 @@
 /*Created by Acrafts 10/20*/
+package KCSched;
+
 import java.util.*;
-public abstract class KCCourse {
+public abstract class Course {
 	String DepartmentName;
 	String ClassNum;
 	Collection<String> PreReqs;
 	Collection<String> ConCurrent;
-	Collection<KCClassRoomTools> NecessaryTools;
+	Collection<ClassRoomTools> NecessaryTools;
 	int NumUnitsLecture;
 	int NumUnitsLab;
 	

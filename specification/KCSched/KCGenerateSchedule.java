@@ -1,27 +1,29 @@
 /*Created by Acrafts 10/20*/
+package KCSched;
+
 import java.util.*;
-public abstract class KCGenerateSchedule {
+public abstract class GenerateSchedule {
 	
 	/*Created by Acrafts 10/20*/
 	/* generates a schedule based on the inputted instructors, rooms, courses,
 	preferences, and conflict resoultion settings */
-	public abstract void KCSchedule_Generate(Collection<KCInstructor> Instructors,
-										Collection<KCRoom> Rooms,
-										Collection<KCCourse> Courses,
-										Collection<KCRule> Preferences);
+	public abstract void Schedule_Generate(Collection<Instructor> instructors,
+										Collection<Room> rooms,
+										Collection<Course> courses,
+										Collection<Rule> preferences);
 	/*Created by Acrafts 10/20*/
 	/* verifies validity of schedule. May be called in Generate function, or in
 	the edit schedule tab as well */
-	public abstract boolean IsScheduleValid(KCSchedule Schedule);
+	public abstract boolean IsScheduleValid(Schedule schedule);
 	/* Added by cgaydosh 11/6 */
-	public abstract void DisplayConflict(KCConflict Conflict);
-	public abstract void DismissConflict(Collection<KCConflict> ConflictList, 
-	                                     KCConflict Conflict);
-   public abstract void ResolveConflictLater(Collection<KCConflict> ConflictList,
-                                             KCConflict Conflict);
+	public abstract void DisplayConflict(Conflict conflict);
+	public abstract void DismissConflict(Collection<KCConflict> conflictList, 
+	                                     Conflict conflict);
+   public abstract void ResolveConflictLater(Collection<Conflict> conflictList,
+                                             Conflict conflict);
 
 	/*Created by Acrafts 10/20*/
-	public abstract class KCComponents{
+	public abstract class Components{
 		/*data fields for schedule generation*/
 		Collection<KCInstructor> Instructors;
 		Collection<KCRoom> Rooms;
@@ -35,16 +37,16 @@ public abstract class KCGenerateSchedule {
 	}
 	/*removed KCConflict class 11/6/11 by acrafts*/
 	/* added KCConflict class 11/6/11 by cgaydosh */
-	public abstract class KCConflict {
-      Collection<KCRule> Violated;
+	public abstract class Conflict {
+      Collection<Rule> Violated;
 	}
 	
 	/*Created by Acrafts 10/20*/
-	public abstract class KCPreferences{
+	public abstract class Preferences{
 		/* preferences to be considered while generating schedules*/
 		Collection<KCRule> Preferences;
 		/* added by cgaydosh 11/6 */
-		public abstract int UpdatePreference(KCRule Pref);
+		public abstract int UpdatePreference(Rule Pref);
 	
 	}
 	

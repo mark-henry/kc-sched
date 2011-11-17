@@ -8,9 +8,10 @@
  * admin, instructors do not have access to this view.
  *
  */
+package KCSched;
 
 import java.util.*;
-public abstract class KCCoursesTab {
+public abstract class CoursesTab {
 	Collection<KCCourse> coursesList;
 	
 	/*
@@ -28,6 +29,6 @@ public abstract class KCCoursesTab {
 	 */
 	public abstract void sortColumn();
 	
-	public abstract Collection<KCCourse> getCourses();
+	public abstract Collection<Course> getCourses();
 	
 }

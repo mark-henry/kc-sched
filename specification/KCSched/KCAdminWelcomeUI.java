@@ -1,6 +1,8 @@
+package KCSched;
+
 import java.util.*;
 
-public abstract class KCAdminWelcomeUI {
+public abstract class AdminWelcomeUI {
 
     public abstract void loadDataTab();
 

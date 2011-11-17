@@ -1,6 +1,7 @@
+package KCSched;
 
 import java.util.*;
-public abstract class KCRoom {
+public abstract class Room {
 	int buildingNumber;
 	int roomNumber;
     int capacity;

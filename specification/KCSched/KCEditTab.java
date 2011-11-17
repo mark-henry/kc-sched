@@ -5,9 +5,10 @@
  * 
  * This class represents what is seen when the 'Edit' tab is selected.
  */
+package KCSched;
 
 import java.util.*;
-public abstract class KCEditTab {
+public abstract class EditTab {
 	Collection<KCSection> sections;
 	
 	// Adds a section to the grid

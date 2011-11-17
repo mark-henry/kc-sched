@@ -8,9 +8,10 @@
  * admin, instructors do not have access to this view.
  *
  */
+package KCSched;
 
 import java.util.*;
-public abstract class KCRoomsTab {
+public abstract class RoomsTab {
 	Collection<KCRoom> roomList;
 	
 	/*
@@ -19,21 +20,21 @@ public abstract class KCRoomsTab {
 	 * for all the room information.  It will then 
 	 * add the room to the database. 
 	 */
-	public abstract void addRoom(KCRoom room);
+	public abstract void addRoom(Room room);
 
 	/*
 	 * Triggered when a user clicks the "-" button.
 	 * This will pop up a dialogue box that will ask the user
 	 * to confirm that they want to completely remove this entry.
 	 */
-	public abstract void deleteRoom(KCRoom room);
+	public abstract void deleteRoom(Room room);
 	
 	/*
 	 * Triggered when a user clicks the "edit" button.
 	 * This will fill all the fields with the current information
 	 * for the selected room so that the database may be edited.
 	 */
-	public abstract void editRoom(KCRoom room);
+	public abstract void editRoom(Room room);
 	
 	/*
 	 * This is triggered when a user clicks the column heading. 
@@ -42,6 +43,6 @@ public abstract class KCRoomsTab {
 	 */
 	public abstract void sortColumn();
 	
-	public abstract Collection<KCRoom> getRooms();
+	public abstract Collection<Room> getRooms();
 	
 }
