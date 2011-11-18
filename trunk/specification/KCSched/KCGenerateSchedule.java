@@ -17,10 +17,6 @@ public abstract class GenerateSchedule {
 	public abstract boolean IsScheduleValid(Schedule schedule);
 	/* Added by cgaydosh 11/6 */
 	public abstract void DisplayConflict(Conflict conflict);
-	public abstract void DismissConflict(Collection<KCConflict> conflictList, 
-	                                     Conflict conflict);
-   public abstract void ResolveConflictLater(Collection<Conflict> conflictList,
-                                             Conflict conflict);
 
 	/*Created by Acrafts 10/20*/
 	public abstract class Components{
