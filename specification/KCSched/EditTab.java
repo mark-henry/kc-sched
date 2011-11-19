@@ -9,7 +9,7 @@ package KCSched;
 
 import java.util.*;
 public abstract class EditTab {
-	Collection<KCSection> sections;
+	Collection<Section> sections;
 	
 	// Adds a section to the grid
 	public abstract void addSection();

@@ -21,9 +21,9 @@ public abstract class GenerateSchedule {
 	/*Created by Acrafts 10/20*/
 	public abstract class Components{
 		/*data fields for schedule generation*/
-		Collection<KCInstructor> Instructors;
-		Collection<KCRoom> Rooms;
-		Collection<KCCourse> Courses;
+		Collection<Instructor> Instructors;
+		Collection<Room> Rooms;
+		Collection<Course> Courses;
 		/*will be called in default constructor, will import all of the type that
 		are marked as "active" or "current"*/
 		public abstract int ImportAllCurrentType(Object Type);
@@ -40,7 +40,7 @@ public abstract class GenerateSchedule {
 	/*Created by Acrafts 10/20*/
 	public abstract class Preferences{
 		/* preferences to be considered while generating schedules*/
-		Collection<KCRule> Preferences;
+		Collection<Rule> Preferences;
 		/* added by cgaydosh 11/6 */
 		public abstract int UpdatePreference(Rule Pref);
 	
