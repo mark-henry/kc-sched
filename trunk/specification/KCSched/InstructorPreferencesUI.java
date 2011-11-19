@@ -14,7 +14,7 @@ public abstract class InstructorPreferencesUI {
 
     /* Called by SetupUI()
     /* Populates the list of items the instructor can request for their room */
-    public abstract Collection<KCRoomItem> getRoomItems();
+    public abstract Collection<RoomItem> getRoomItems();
 
     /* Returns to the login screen for another user to login */
     public abstract void logout();

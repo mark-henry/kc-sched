@@ -12,7 +12,7 @@ package KCSched;
 
 import java.util.*;
 public abstract class RoomsTab {
-	Collection<KCRoom> roomList;
+	Collection<Room> roomList;
 	
 	/*
 	 * Triggered when a user clicks the "+" button.

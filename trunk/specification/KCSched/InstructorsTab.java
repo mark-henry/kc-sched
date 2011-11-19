@@ -12,7 +12,7 @@ package KCSched;
 
 import java.util.*;
 public abstract class InstructorsTab {
-	Collection<KCInstructor> instructorsList;
+	Collection<Instructor> instructorsList;
 	
 	/*
 	 * Triggered when a user clicks the "+" button.
