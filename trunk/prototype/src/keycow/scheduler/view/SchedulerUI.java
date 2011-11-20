@@ -22,7 +22,7 @@ public class SchedulerUI extends JFrame {
     public SchedulerUI() {
         createTabs();
 
-        setMinimumSize(new Dimension(800, 600));
+        setMinimumSize(new Dimension(1024, 768));
         setPreferredSize(new Dimension(1024, 768));
         setContentPane(tabbedPane);
         setTitle("KeyCow Scheduler");
