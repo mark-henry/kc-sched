@@ -1,6 +1,7 @@
 all:	main 
 
 main:	
+	mkdir classes	
 	javac -g -d classes \
 	      src/keycow/scheduler/view/data/*.java \
 	      src/keycow/scheduler/view/generate/*.java \
@@ -8,9 +9,10 @@ main:
 
 jar:
 	cd classes ; \
-	jar cmf MANIFEST caltool.jar caltool ; \
-	chmod a+x caltool.jar ; \
-	mv caltool.jar ..
+	echo Main-Class: keycow.scheduler.view.Main > Manifest.txt;\
+	jar cmf Manifest.txt scheduler.jar keycow ; \
+	chmod a+x scheduler.jar ; \
+	mv scheduler.jar ..
 
 doc:
 	javadoc \
@@ -43,4 +45,4 @@ print:
 	csh -q -c "../.make-print"
 
 clean:
-	rm -rf *.class *_ui/*.class javadoc/*
+	rm -rf *.class *_ui/*.class javadoc/* *.jar classes
