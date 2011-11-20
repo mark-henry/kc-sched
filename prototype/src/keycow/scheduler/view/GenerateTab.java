@@ -3,6 +3,8 @@ package keycow.scheduler.view;
 import javax.swing.*;
 import java.awt.*;
 
+import keycow.scheduler.view.generate.*;
+
 public class GenerateTab extends JTabbedPane {
     private final int padding_x = 50;
     private final int padding_y = 50;
@@ -22,9 +24,9 @@ public class GenerateTab extends JTabbedPane {
     }
 
     public void createTabs() {
-        addTab(padded_title("Components"),  new JPanel());
-        addTab(padded_title("Preferences"), new JPanel());
-        addTab(padded_title("Generate"),    new JPanel());
+        addTab(padded_title("Components"),  new ComponentsTab());
+        addTab(padded_title("Preferences"), new PreferencesTab());
+        addTab(padded_title("Generate"),    new SubGenerateTab());
     }
 
 }
