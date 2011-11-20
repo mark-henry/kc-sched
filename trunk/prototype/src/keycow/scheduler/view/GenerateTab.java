@@ -9,7 +9,7 @@ public class GenerateTab extends JTabbedPane {
     private final int padding_x = 50;
     private final int padding_y = 50;
 
-    private String padded_title(String title) {
+    private String paddedTitle(String title) {
         return "<html><body" + 
             " leftmargin="   + padding_x + 
             " marginwidth="  + padding_x + 
@@ -24,9 +24,9 @@ public class GenerateTab extends JTabbedPane {
     }
 
     public void createTabs() {
-        addTab(padded_title("Components"),  new ComponentsTab());
-        addTab(padded_title("Preferences"), new PreferencesTab());
-        addTab(padded_title("Generate"),    new SubGenerateTab());
+        addTab(paddedTitle("Components"),  new ComponentsTab());
+        addTab(paddedTitle("Preferences"), new PreferencesTab());
+        addTab(paddedTitle("Generate"),    new SubGenerateTab());
     }
 
 }
