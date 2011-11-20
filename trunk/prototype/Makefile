@@ -1,7 +1,10 @@
 all:	main 
 
 main:	
-	mkdir classes	
+	
+	rm -rf classes ; \
+	mkdir classes ; \
+
 	javac -g -d classes \
 	      src/keycow/scheduler/view/data/*.java \
 	      src/keycow/scheduler/view/generate/*.java \
