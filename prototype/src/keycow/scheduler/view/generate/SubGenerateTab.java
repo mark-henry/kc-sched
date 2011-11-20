@@ -5,4 +5,9 @@ import java.awt.*;
 
 public class SubGenerateTab extends JPanel {
 
+
+	public SubGenerateTab(){
+	addJPanel();
+	
+	}
 }
