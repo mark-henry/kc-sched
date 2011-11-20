@@ -1,5 +1,7 @@
 package keycow.scheduler.view;
 
+import javax.swing.*;
+
 public class Main {
     /**
      * Construct a SchedulerUI and make it visible
