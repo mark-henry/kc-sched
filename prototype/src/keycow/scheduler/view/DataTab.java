@@ -9,7 +9,7 @@ public class DataTab extends JTabbedPane {
     private final int padding_x = 50;
     private final int padding_y = 50;
 
-    private String padded_title(String title) {
+    private String paddedTitle(String title) {
         return "<html><body" + 
             " leftmargin="   + padding_x + 
             " marginwidth="  + padding_x + 
@@ -24,9 +24,9 @@ public class DataTab extends JTabbedPane {
     }
 
     public void createTabs() {
-        addTab(padded_title("Instructors"), new InstructorsTab());
-        addTab(padded_title("Courses"),     new CoursesTab());
-        addTab(padded_title("Rooms"),       new RoomsTab());
+        addTab(paddedTitle("Instructors"), new InstructorsTab());
+        addTab(paddedTitle("Courses"),     new CoursesTab());
+        addTab(paddedTitle("Rooms"),       new RoomsTab());
     }
 
 }
