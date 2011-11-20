@@ -2,6 +2,8 @@ all:	main
 
 main:	
 	javac -g -d classes \
+	      src/keycow/scheduler/view/data/*.java \
+	      src/keycow/scheduler/view/generate/*.java \
 	      src/keycow/scheduler/view/*.java
 
 jar:
