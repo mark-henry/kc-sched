@@ -2,6 +2,8 @@ package keycow.scheduler.view.generate;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ComponentsTab extends JPanel {
 
@@ -60,7 +62,17 @@ public class ComponentsTab extends JPanel {
       
       JComboBox roomsBox = new JComboBox (options);
       
+      instructorsBox.setEditable(false);
+      coursesBox.setEditable(false);
+      roomsBox.setEditable(false);
       
+      ComponentsActionListener insAction = new ComponentsActionListener();
+      ComponentsActionListener coursesAction = new ComponentsActionListener();
+      ComponentsActionListener roomsAction = new ComponentsActionListener();
+      
+      instructorsBox.addActionListener(insAction);
+      coursesBox.addActionListener(coursesAction);
+      roomsBox.addActionListener(roomsAction);
       
       insPanel.add(instructorsLabel);
       coursesPanel.add(coursesLabel);
@@ -85,4 +97,19 @@ public class ComponentsTab extends JPanel {
       
       this.add(panel);
    }
+   
+   class ComponentsActionListener implements ActionListener {
+
+      public void actionPerformed(ActionEvent evt) {
+         JComboBox cb = (JComboBox)evt.getSource();
+         Object newItem = cb.getSelectedItem();
+         
+         if("comboBoxChanged".equals(evt.getActionCommand()))
+            if(newItem.equals("Select Individual"))
+               System.out.println("Select Individual was selected");
+            else if(newItem.equals("Import All Marked Current"))
+               System.out.println("Import All Marked Current selected");
+      }
+   }
 }
+
