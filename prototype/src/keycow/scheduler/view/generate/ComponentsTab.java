@@ -6,11 +6,20 @@ import java.awt.*;
 public class ComponentsTab extends JPanel {
 
    private static int rows = 35;
+   private JPanel panel, insPanel, coursesPanel, roomsPanel;
 
    public ComponentsTab()
    {
-      JPanel panel = new JPanel();
-      setLayout(new BoxLayout (this, BoxLayout.X_AXIS));
+      panel = new JPanel();
+      insPanel = new JPanel();
+      coursesPanel = new JPanel();
+      roomsPanel = new JPanel();
+      
+      panel.setLayout(new BoxLayout (panel, BoxLayout.X_AXIS));
+      insPanel.setLayout(new BoxLayout(insPanel, BoxLayout.Y_AXIS));
+      coursesPanel.setLayout(new BoxLayout(coursesPanel, BoxLayout.Y_AXIS));
+      roomsPanel.setLayout(new BoxLayout(roomsPanel, BoxLayout.Y_AXIS));
+      
       JLabel instructorsLabel = new JLabel("Instructors");
       JLabel coursesLabel = new JLabel("Courses");
       JLabel roomsLabel = new JLabel("Rooms");
@@ -52,18 +61,27 @@ public class ComponentsTab extends JPanel {
       JComboBox roomsBox = new JComboBox (options);
       
       
-/*      
-      panel.add(instructorsLabel);
-      panel.add(coursesLabel);
-      panel.add(roomsLabel);
-//*/
-      panel.add(InstructorsScrollPane);
-      panel.add(CoursesScrollPane);
-      panel.add(RoomsScrollPane);
-      panel.add(instructorsBox);
-      panel.add(coursesBox);
-      panel.add(roomsBox);
+      
+      insPanel.add(instructorsLabel);
+      coursesPanel.add(coursesLabel);
+      roomsPanel.add(roomsLabel);
+
+      insPanel.add(InstructorsScrollPane);
+      coursesPanel.add(CoursesScrollPane);
+      roomsPanel.add(RoomsScrollPane);
+      insPanel.add(instructorsBox);
+      coursesPanel.add(coursesBox);
+      roomsPanel.add(roomsBox);
+
+      panel.add(insPanel);
+      panel.add(coursesPanel);
+      panel.add(roomsPanel);
+
       panel.setVisible(true);
+
+      insPanel.setVisible(true);
+      coursesPanel.setVisible(true);
+      roomsPanel.setVisible(true);
       
       this.add(panel);
    }
