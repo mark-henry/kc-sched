@@ -39,7 +39,7 @@ public class RoomsTab extends JPanel {
 	    room_details.add(new JLabel("Stations"));
 	    room_details.add(new JTextField(20));
 	    room_details.add(new JLabel("Features"));
-	    room_details.add(new JTextField(20));
+	    room_details.add(new JTextPane());
 	    room_details.add(new JButton("Commit"));
 	    room_details.add(new JButton("Restore"));
 	      
