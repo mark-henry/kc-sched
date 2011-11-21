@@ -11,29 +11,15 @@ import java.util.*;
 public abstract class EditTab {
 	Collection<Section> sections;
 	
-	// Adds a section to the grid
+	// Add/remove a section to/from the document
 	public abstract void addSection();
+	public abstract void deleteSection();
 	
 	// Pins a Section to prevent auto-scheduling
 	public abstract void pinSection();
+	public abstract void unpinSection();
 	
-	// Moves a section from one time to another
-	public abstract void moveSection();
-	
-	// Opens a section for editing
-	public abstract void editSection();
-	
-	// Displays/hides rollover info pane for a section
-	public abstract void displayRollover();
-	public abstract void hideRollover();
-	
-	// View controls
-	public abstract void zoomInVertical();
-	public abstract void zoomOutVertical();
-	public abstract void zoomInHorizontal();
-	public abstract void zoomOutHorizontal();
-	public abstract void scrollDown();
-	public abstract void scrollUp();
-	public abstract void scrollLeft();
-	public abstract void scrollRight();
+	// Get/set a Section's properties
+	public abstract void getSection();
+	public abstract void setSection();
 }
