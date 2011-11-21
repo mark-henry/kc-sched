@@ -6,19 +6,6 @@ import java.awt.*;
 public class SchedulerUI extends JFrame {
     JTabbedPane tabbedPane = new JTabbedPane();
 
-    private final int padding_x = 15;
-    private final int padding_y = 8;
-
-    private String paddedTitle(String title) {
-        return "<html><body" + 
-            " leftmargin="   + padding_x + 
-            " marginwidth="  + padding_x + 
-            " topmargin="    + padding_y +
-            " marginheight=" + padding_y + "><b>" +
-            title + "</b></body></html>";
-    }
-
-
     public SchedulerUI() {
         createTabs();
 
@@ -30,10 +17,10 @@ public class SchedulerUI extends JFrame {
     }
 
     public void createTabs() {
-        tabbedPane.addTab(paddedTitle("Data"),     new DataTab());
-        tabbedPane.addTab(paddedTitle("Generate"), new GenerateTab());
-        tabbedPane.addTab(paddedTitle("Edit"),     new EditTab());
-        tabbedPane.addTab(paddedTitle("Publish"),  new PublishTab());
+        tabbedPane.addTab(BigTabs.paddedTitle("Data", 15, 8),     new DataTab());
+        tabbedPane.addTab(BigTabs.paddedTitle("Generate", 15, 8), new GenerateTab());
+        tabbedPane.addTab(BigTabs.paddedTitle("Edit", 15, 8),     new EditTab());
+        tabbedPane.addTab(BigTabs.paddedTitle("Publish", 15, 8),  new PublishTab());
     }
     
 }
