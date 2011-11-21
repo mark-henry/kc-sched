@@ -2,6 +2,7 @@ package keycow.scheduler.view.data;
 
 import javax.swing.*;
 import java.awt.*;
+import javax.swing.border.*;
 
 public class RoomsTab extends JPanel {
 	private JPanel room_list, room_details;
