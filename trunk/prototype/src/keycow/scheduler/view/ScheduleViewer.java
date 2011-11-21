@@ -25,50 +25,120 @@ public class ScheduleViewer extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabelFakeImg = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabelYaxis = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
-        jLabel1.setText("ScheduleViewer component. Grid is here.");
+        jLabelFakeImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/keycow/scheduler/view/fake.png"))); // NOI18N
 
-        jLabel2.setText("X axis: time.");
+        jLabel1.setText("Monday");
 
-        jLabelYaxis.setText("Y axis: Courses");
+        jLabel2.setText("Tuesday");
 
-        jLabel4.setText("Currently:");
+        jLabel3.setText("Wednesday");
+
+        jLabel4.setText("Thursday");
+
+        jLabel5.setText("Friday");
+
+        jLabel6.setText("Saturday");
+
+        jLabel7.setText("Sunday");
+
+        jLabel8.setText("CPE-101");
+
+        jLabel9.setText("CPE-357");
+
+        jLabel10.setText("CPE-351");
+
+        jLabel11.setText("CPE-406");
+
+        jLabel12.setText("CPE-161");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabelYaxis)
-                    .addComponent(jLabel4))
-                .addContainerGap(194, Short.MAX_VALUE))
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel9))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(59, 59, 59)
+                        .addComponent(jLabel1)
+                        .addGap(133, 133, 133)
+                        .addComponent(jLabel2)
+                        .addGap(112, 112, 112)
+                        .addComponent(jLabel3)
+                        .addGap(104, 104, 104)
+                        .addComponent(jLabel4)
+                        .addGap(121, 121, 121)
+                        .addComponent(jLabel5)
+                        .addGap(127, 127, 127)
+                        .addComponent(jLabel6)
+                        .addGap(108, 108, 108)
+                        .addComponent(jLabel7))
+                    .addComponent(jLabelFakeImg))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabelYaxis)
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelFakeImg))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addComponent(jLabel8)
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel9)
+                        .addGap(23, 23, 23)
+                        .addComponent(jLabel11)
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel10)
+                        .addGap(29, 29, 29)
+                        .addComponent(jLabel12)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    public javax.swing.JLabel jLabelYaxis;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabelFakeImg;
     // End of variables declaration//GEN-END:variables
 }
