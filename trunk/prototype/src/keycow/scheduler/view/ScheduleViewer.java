@@ -5,6 +5,8 @@
  */
 package keycow.scheduler.view;
 
+import javax.swing.*;
+
 /**
  *
  * @author Mark Henry
@@ -14,6 +16,15 @@ public class ScheduleViewer extends javax.swing.JPanel {
     /** Creates new form ScheduleViewer */
     public ScheduleViewer() {
         initComponents();
+
+        //Image yuss
+        String path = "./fake.png";
+        java.net.URL imgURL = getClass().getResource(path);
+        if (imgURL != null) {
+            jLabelFakeImg.setIcon(new ImageIcon(imgURL, ""));
+        } else {
+            jLabelFakeImg.setText("Couldn't find file: " + path);
+        }
     }
 
     /** This method is called from within the constructor to
@@ -38,8 +49,6 @@ public class ScheduleViewer extends javax.swing.JPanel {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-
-        jLabelFakeImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/keycow/scheduler/view/fake.png"))); // NOI18N
 
         jLabel1.setText("Monday");
 
@@ -77,7 +86,7 @@ public class ScheduleViewer extends javax.swing.JPanel {
                     .addComponent(jLabel12)
                     .addComponent(jLabel8)
                     .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(59, 59, 59)
@@ -123,7 +132,7 @@ public class ScheduleViewer extends javax.swing.JPanel {
                         .addComponent(jLabel10)
                         .addGap(29, 29, 29)
                         .addComponent(jLabel12)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(452, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
