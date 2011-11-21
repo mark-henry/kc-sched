@@ -9,13 +9,15 @@ public class SubGenerateTab extends JPanel {
 	private static int rows = 25;
 
 	public SubGenerateTab(){
-	//setLayout(new BoxLayout (this, BoxLayout.X_AXIS));
+	setLayout(new BoxLayout (this, BoxLayout.X_AXIS));
 	JPanel panel = new JPanel();
 	JPanel conflictPanel = new JPanel();
+	JLabel header = new JLabel("Generate");
 	JButton generateButton = new JButton("Generate");
 	
 	conflictPanel.setBorder(new TitledBorder("Details for conflict"));
 
+	header.setAlignmentY(Component.TOP_ALIGNMENT);
 	
 	JList conflictList = new JList();
 	conflictList.setVisibleRowCount(rows);
@@ -37,12 +39,14 @@ public class SubGenerateTab extends JPanel {
 
 	//panel.add(Box.createHorizontalGlue());
 	//panel.add(generateButton);
+	
+	
+//panel.add(header);
 
+panel.add(GeneratePane);
+panel.add(conflictPanel);
 
-panel.add(GeneratePane, BorderLayout.WEST);
-panel.add(conflictPanel, BorderLayout.EAST);
-
-panel.add(generateButton, BorderLayout.SOUTH);
+panel.add(generateButton);
 
 	panel.setVisible(true);
 	this.add(panel);
