@@ -41,7 +41,11 @@ public abstract class GenerateSchedule {
 	public abstract class Preferences{
 		/* preferences to be considered while generating schedules*/
 		Collection<Rule> Preferences;
+		
 		/* added by cgaydosh 11/6 */
+		/*@ requires (* must contain a rule *)
+        @ ensures (* The preferences collection is updated. *)
+        @*/ 
 		public abstract int UpdatePreference(Rule Pref);
 	
 	}
