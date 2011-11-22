@@ -17,7 +17,7 @@ public class ScheduleViewer extends javax.swing.JPanel {
     public ScheduleViewer() {
         initComponents();
 
-        //Image yuss
+        // Set up fake document fiew
         String path = "./fake.png";
         java.net.URL imgURL = getClass().getResource(path);
         if (imgURL != null) {
