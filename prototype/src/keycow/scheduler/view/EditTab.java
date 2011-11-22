@@ -20,11 +20,18 @@ public class EditTab extends javax.swing.JPanel {
     public EditTab() {
         initComponents();
         
+        // Set up big side tabs
         int bigTabsWidth = -3;
         int bigTabsHeight = 50;
         jTabbedPane1.setTitleAt(0, BigTabs.paddedTitle("Rooms", bigTabsWidth, bigTabsHeight));
         jTabbedPane1.setTitleAt(1, BigTabs.paddedTitle("Courses", bigTabsWidth, bigTabsHeight));
         jTabbedPane1.setTitleAt(2, BigTabs.paddedTitle("Instructors", bigTabsWidth, bigTabsHeight));
+        
+        // Set up invisible SectionEditor
+        editor = new SectionEditor();
+        editor.setVisible(false);
+        this.add(editor);
+        this.invalidate();
     }
     
     /** This method is called from within the constructor to
@@ -54,7 +61,7 @@ public class EditTab extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 368, Short.MAX_VALUE)
+            .addGap(0, 437, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("tab1", jPanel1);
@@ -67,7 +74,7 @@ public class EditTab extends javax.swing.JPanel {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 368, Short.MAX_VALUE)
+            .addGap(0, 437, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("tab2", jPanel2);
@@ -80,11 +87,16 @@ public class EditTab extends javax.swing.JPanel {
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 368, Short.MAX_VALUE)
+            .addGap(0, 437, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("tab3", jPanel3);
 
+        scheduleViewer1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ClickScheduleViewer(evt);
+            }
+        });
         jScrollPane1.setViewportView(scheduleViewer1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -94,17 +106,26 @@ public class EditTab extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(6, 6, 6)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 373, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 373, Short.MAX_VALUE)))
+                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 442, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+private void ClickScheduleViewer(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClickScheduleViewer
+    if (evt.getClickCount() == 2)
+    {
+        editor.setVisible(true);
+        this.invalidate();
+    }
+}//GEN-LAST:event_ClickScheduleViewer
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -113,4 +134,6 @@ public class EditTab extends javax.swing.JPanel {
     private javax.swing.JTabbedPane jTabbedPane1;
     private keycow.scheduler.view.ScheduleViewer scheduleViewer1;
     // End of variables declaration//GEN-END:variables
+
+    private SectionEditor editor;
 }
