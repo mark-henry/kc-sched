@@ -13,21 +13,26 @@ package KCSched;
 import java.util.*;
 public abstract class CoursesTab {
 	
+   
    /**
     * The collection of all the courses already added
     */
-   Collection<Course> coursesList;
+   private /*@ spec_public @*/ Collection<Course> coursesList;
+   
    
    /**
     * A Course holds all the information about a course
     */
-   Course newCourse;
+   private /*@ spec_public @*/ Course newCourse;
 	
+   
 	/**
 	 * Triggered when a user clicks the "+" button on the 'Courses Added'
     * section of the view. This will then bring up a clear 'Course Information'
     * section in which you can enter course info into.
 	 */
+   
+   //@ ensures coursesList.size()++;
 	public abstract void addCourse();
    
    
@@ -36,6 +41,9 @@ public abstract class CoursesTab {
     * section of the view. This will then remove the highlighted course in 
     * 'Courses Added'.
     */
+   
+   //@ requires coursesList.size() > 0;
+   //@ ensures coursesList.size()--;
    public abstract void removeCourse();
    
    
@@ -44,7 +52,10 @@ public abstract class CoursesTab {
     * the view. This will then fill all the fields of the 'Course Information'
     * section of the view with the course information.
     */
+   
+   //@ ensures info for current course will be show in info pane;
    public abstract void viewInfo();
+   
    
    /**
     * Triggered when a user clicks the "Commit" button on the 'Course
@@ -52,6 +63,8 @@ public abstract class CoursesTab {
     * add it to the Collection of Courses, and display it in the 'Courses
     * Added' section.
     */
+   
+   //@ ensures coursesList.size()++; 
    public abstract void commitInfo();
    
    
@@ -60,6 +73,8 @@ public abstract class CoursesTab {
     * Information' section of the view. This will clear all of the info already
     * entered into the 'Course Information' section.
     */
+   
+   //@ ensures all info fields for current course are cleared;
    public abstract void restoreInfo();
 	
 	
@@ -67,6 +82,8 @@ public abstract class CoursesTab {
     * Helper method used to get the collection of courses that have already
     * been added.
     */
+   
+   //@ requires coursesList.size() > 0;
 	public abstract Collection<Course> getCourses();
 	
 }
