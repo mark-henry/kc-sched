@@ -18,7 +18,7 @@ public class ScheduleViewer extends javax.swing.JPanel {
         initComponents();
 
         // Set up fake document fiew
-        String path = "./src/keycow/scheduler/view/fake.png";
+        String path = "fake.png";
         java.net.URL imgURL = getClass().getResource(path);
         if (imgURL != null) {
             jLabelFakeImg.setIcon(new ImageIcon(imgURL, ""));

@@ -69,7 +69,7 @@ public class InstructorsTab extends JPanel {
       for (int i = 0; i < 6; i++) {
          JPanel row = new JPanel();
          row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
-         row.add(new JLabel(labels[i]));
+         row.add(new JLabel(labels[i], SwingConstants.LEFT));
          row.add(new JTextField(20));
          instructor_details.add(row);
       }
