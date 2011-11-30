@@ -15,6 +15,7 @@ public class GenerateTab extends JTabbedPane {
         addTab(BigTabs.paddedTitle("Components", 50, 50),  new ComponentsTab());
         addTab(BigTabs.paddedTitle("Preferences", 50, 50), new PreferencesTab());
         addTab(BigTabs.paddedTitle("Generate", 50, 50),    new SubGenerateTab());
+        addTab(BigTabs.paddedTitle("Schedules", 50, 50),    new ScheduleViewerTab());
     }
 
 }
