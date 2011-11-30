@@ -34,8 +34,8 @@ public class ComponentsTab extends JPanel {
       instructorsList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
       instructorsList.setLayoutOrientation(JList.VERTICAL);
       instructorsList.setVisibleRowCount(rows);
-      instructorsList.setBackground (Color.blue);
-      instructorsList.setForeground (Color.blue);
+      //instructorsList.setBackground (Color.blue);
+      //instructorsList.setForeground (Color.blue);
       
       JComboBox instructorsBox = new JComboBox (options);
 
@@ -46,8 +46,8 @@ public class ComponentsTab extends JPanel {
       coursesList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
       coursesList.setLayoutOrientation(JList.VERTICAL);
       coursesList.setVisibleRowCount(rows);
-      coursesList.setBackground (Color.blue);
-      coursesList.setForeground (Color.blue);
+      //coursesList.setBackground (Color.blue);
+      //coursesList.setForeground (Color.blue);
       
       JComboBox coursesBox = new JComboBox (options);
       
@@ -57,8 +57,8 @@ public class ComponentsTab extends JPanel {
       roomsList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
       roomsList.setLayoutOrientation(JList.VERTICAL);
       roomsList.setVisibleRowCount(rows);
-      roomsList.setBackground (Color.blue);
-      roomsList.setForeground (Color.blue);
+      //roomsList.setBackground (Color.blue);
+      //roomsList.setForeground (Color.blue);
       
       JComboBox roomsBox = new JComboBox (options);
       
