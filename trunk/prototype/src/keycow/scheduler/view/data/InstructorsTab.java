@@ -2,6 +2,7 @@ package keycow.scheduler.view.data;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.border.*;
 
 public class InstructorsTab extends JPanel {
@@ -66,7 +67,7 @@ public class InstructorsTab extends JPanel {
        * construct 6 JPanels and add each label / textfield to it
        * then add the row to the right window
        */
-      for (int i = 0; i < 6; i++) {
+      for (int i = 0; i < labels.length; i++) {
          JPanel row = new JPanel();
          row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
          row.add(new JLabel(labels[i], SwingConstants.LEFT));
@@ -79,6 +80,27 @@ public class InstructorsTab extends JPanel {
        */
        JPanel row = new JPanel();
        row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
+       JButton preferences = new JButton("Preferences");
+       Object[] possibleValues = { "CPE 101", "CPE 102", "CPE 103", "CPE 141", "CPE 308" };
+       preferences.addActionListener(new ActionListener() {
+ 		
+            public void actionPerformed(ActionEvent e)
+            {
+                /*JOptionPane.showInputDialog(null,
+    				"Choose one", "Input",
+					JOptionPane.INFORMATION_MESSAGE, null,
+					possibleValues, possibleValues[0]);*/
+					
+				Object[] possibleValues = { "Test Schedule1", "Final Schedule Spring 11", "Final Schedule Fall 11", "Temp Schedule Winter 12", "Final Schedule Winter 12" };
+				Object selectedValue = JOptionPane.showInputDialog(null,
+					"Choose a schedule", "Instructor Preferences",
+					JOptionPane.INFORMATION_MESSAGE, null,
+					possibleValues, possibleValues[0]);
+            }
+        }); 
+       
+       
+       row.add(preferences);
        row.add(new JButton("Commit"));
        row.add(new JButton("Restore"));
        instructor_details.add(row);
