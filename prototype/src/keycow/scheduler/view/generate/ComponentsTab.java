@@ -27,8 +27,11 @@ public class ComponentsTab extends JPanel {
       JLabel roomsLabel = new JLabel("Rooms");
       
       String [] options = {"+", "Import All Marked Current", "Select Individual"};
+      String [] instructors = {"John Bellardo", "Gene Fisher", "Clinton Staley", "Julie Workman"};
+      String [] rooms = {"14-204", "14-206", "14-301", "14-302", "14-303"};
+      String [] courses = {"CSC 101", "CSC 102", "CSC 103", "CSC 141", "CSC 308", "CSC 453", "CSC 480"};
       
-      JList instructorsList = new JList();
+      JList instructorsList = new JList(instructors);
       JScrollPane InstructorsScrollPane = new JScrollPane(instructorsList);
       
       instructorsList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
@@ -40,7 +43,7 @@ public class ComponentsTab extends JPanel {
       JComboBox instructorsBox = new JComboBox (options);
 
       
-      JList coursesList = new JList();
+      JList coursesList = new JList(courses);
       JScrollPane CoursesScrollPane = new JScrollPane(coursesList);
       
       coursesList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
@@ -51,7 +54,7 @@ public class ComponentsTab extends JPanel {
       
       JComboBox coursesBox = new JComboBox (options);
       
-      JList roomsList = new JList();
+      JList roomsList = new JList(rooms);
       JScrollPane RoomsScrollPane = new JScrollPane(roomsList);
       
       roomsList.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
