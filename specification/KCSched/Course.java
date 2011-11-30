@@ -8,13 +8,10 @@ public abstract class Course {
 	Collection<String> PreReqs;
 	Collection<String> ConCurrent;
 	Collection<ClassRoomTools> NecessaryTools;
-	int NumUnitsLecture;
-	int NumUnitsLab;
-	
-	//Added by Acrafts 10/31
+	int NumUnits;
 	boolean IsLab;
 	boolean IsLecture;
-	int NumUnits;
+
 	
 
 }
