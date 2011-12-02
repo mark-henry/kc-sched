@@ -31,20 +31,47 @@ public abstract class GenerateSchedule {
 		/* added by cgaydosh 11/6 */
 		public abstract int RemoveObjectFromList(Object Type); //when user clicks minus button
 	}
+	
+	/** 
+	 * Conflict is the container for 
+	 *
+	 */
+	 
 	/*removed KCConflict class 11/6/11 by acrafts*/
 	/* added KCConflict class 11/6/11 by cgaydosh */
 	public abstract class Conflict {
+	   /** List of preferences that were violated */
       Collection<Rule> Violated;
+      
+      /**
+       * Adds a rule to the violated rule list.
+       * @param Pref a rule that is to be added to the list.
+       */
+       
+      /*@ requires !(\exists Rule Pref; Violated.contains(Pref));
+        @ ensures (\exists Rule Pref; Violated.contains(Pref);)
+        @*/
+      public abstract void addViolation(Rule Pref);
 	}
 	
+	/**
+    * Class Preferences is the container for all the instructor and schedule generation preferences.
+    * 
+    */
 	/*Created by Acrafts 10/20*/
 	public abstract class Preferences{
-		/* preferences to be considered while generating schedules*/
+	
+		/** preferences to be considered while generating schedules*/
 		Collection<Rule> Preferences;
 		
+	   /**
+       * Adds a rule to the violated rule list.
+       * @param Pref a rule that is to be added to the preferences to be considered list.
+       * @return if there was an error the error code
+       */
 		/* added by cgaydosh 11/6 */
-		/*@ requires (* must contain a rule *)
-        @ ensures (* The preferences collection is updated. *)
+		/*@ requires !(\exists Rule Pref; Preferences.contains(Pref));
+        @ ensures (\exists Rule Pref; Preferences.contains(Pref);)
         @*/ 
 		public abstract int UpdatePreference(Rule Pref);
 	
