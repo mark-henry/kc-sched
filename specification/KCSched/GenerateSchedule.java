@@ -67,7 +67,7 @@ public abstract class GenerateSchedule {
 	   /**
        * Adds a rule to the violated rule list.
        * @param Pref a rule that is to be added to the preferences to be considered list.
-       * @return if there was an error the error code
+       * @return if there was an error the error code 0 otherwise
        */
 		/* added by cgaydosh 11/6 */
 		/*@ requires !(\exists Rule Pref; Preferences.contains(Pref));
