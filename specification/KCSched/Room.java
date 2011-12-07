@@ -10,4 +10,5 @@ public abstract class Room {
     boolean lab;
     int stations;
 	Collection<KCSched.ClassRoomTools> ToolsInRoom;
+	boolean isCurrent;
 }
