@@ -7,13 +7,26 @@ public class SchedulerUI extends JFrame {
     JTabbedPane tabbedPane = new JTabbedPane();
 
     public SchedulerUI() {
-        createTabs();
+       JMenuBar menuBar = new JMenuBar();
+       
+       JMenu file = new JMenu("File");
+       menuBar.add(file);
+       
+       JMenuItem save = new JMenuItem("Save");
+       menuBar.add(save);
+       
+       this.setJMenuBar(menuBar);
+       //this.add(menuBar); 
+       
+       createTabs();
 
         setMinimumSize(new Dimension(1024, 768));
         setPreferredSize(new Dimension(1024, 768));
         setContentPane(tabbedPane);
         setTitle("KeyCow Scheduler");
         pack();
+       
+       
     }
 
     public void createTabs() {
