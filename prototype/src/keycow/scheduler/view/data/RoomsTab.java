@@ -29,8 +29,23 @@ public class RoomsTab extends JPanel {
 
       JPanel button_panel = new JPanel();
       button_panel.setLayout(new BoxLayout(button_panel, BoxLayout.X_AXIS));
-      button_panel.add(new JButton("+"));
-      button_panel.add(new JButton("-"));
+      
+       JButton plus = new JButton("+");
+       plus.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+               JOptionPane.showConfirmDialog(null, "Empty all information field to begin adding new Room?", "+", JOptionPane.YES_NO_OPTION);
+           }
+       });
+       
+       JButton minus = new JButton("-");
+       minus.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+               JOptionPane.showConfirmDialog(null, "Remove this class from the permanent data list?", "-", JOptionPane.YES_NO_OPTION);
+           }
+       });
+       
+      button_panel.add(plus);
+      button_panel.add(minus);
       
 
       room_list.add(table);
@@ -69,8 +84,24 @@ public class RoomsTab extends JPanel {
 
        JPanel row = new JPanel();
        row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
-       row.add(new JButton("Commit"));
-       row.add(new JButton("Restore"));
+       
+       JButton commit = new JButton("Commit");
+       commit.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+               JOptionPane.showConfirmDialog(null, "Commit information and add a new Room?", "Commit", JOptionPane.YES_NO_OPTION);
+           }
+       });       
+       
+       
+       JButton restore = new JButton("Restore");
+       restore.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) {
+               JOptionPane.showConfirmDialog(null, "Empty all information fields?", "Restore", JOptionPane.YES_NO_OPTION);
+           }
+       });
+       
+       row.add(commit);
+       row.add(restore);
        room_details.add(row);
 
 
