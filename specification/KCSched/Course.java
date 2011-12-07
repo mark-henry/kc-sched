@@ -3,6 +3,7 @@ package KCSched;
 
 import java.util.*;
 public abstract class Course {
+   int id;
 	String DepartmentName;
 	String ClassNum;
 	Collection<String> PreReqs;
