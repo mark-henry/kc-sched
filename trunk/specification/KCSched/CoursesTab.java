@@ -32,7 +32,7 @@ public abstract class CoursesTab {
     * section in which you can enter course info into.
 	 */
    
-   //@ ensures coursesList.size()++;
+   //@ ensures coursesList.size() == \old(coursesList.size()) + 1;
 	public abstract void addCourse();
    
    
@@ -43,7 +43,7 @@ public abstract class CoursesTab {
     */
    
    //@ requires coursesList.size() > 0;
-   //@ ensures coursesList.size()--;
+   //@ ensures coursesList.size() == \old(coursesList.size()) - 1;
    public abstract void removeCourse();
    
    
@@ -53,7 +53,7 @@ public abstract class CoursesTab {
     * section of the view with the course information.
     */
    
-   //@ ensures info for current course will be show in info pane;
+   //@ requires coursesList.size() > 0;
    public abstract void viewInfo();
    
    
@@ -64,7 +64,7 @@ public abstract class CoursesTab {
     * Added' section.
     */
    
-   //@ ensures coursesList.size()++; 
+   //@ ensures coursesList.size() == \old(coursesList.size()) + 1; 
    public abstract void commitInfo();
    
    
@@ -74,7 +74,6 @@ public abstract class CoursesTab {
     * entered into the 'Course Information' section.
     */
    
-   //@ ensures all info fields for current course are cleared;
    public abstract void restoreInfo();
 	
 	
