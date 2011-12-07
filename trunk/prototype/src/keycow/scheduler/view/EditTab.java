@@ -28,10 +28,10 @@ public class EditTab extends javax.swing.JPanel {
         jTabbedPane1.setTitleAt(2, BigTabs.paddedTitle("Instructors", bigTabsWidth, bigTabsHeight));
         
         // Set up invisible SectionEditor
-        editor = new SectionEditor();
-        editor.setVisible(false);
-        this.add(editor);
-        this.invalidate();
+//        editor = new SectionEditor();
+//        editor.setVisible(false);
+//        this.add(editor);
+//        this.invalidate();
     }
     
     /** This method is called from within the constructor to
@@ -121,8 +121,7 @@ public class EditTab extends javax.swing.JPanel {
 private void ClickScheduleViewer(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ClickScheduleViewer
     if (evt.getClickCount() == 2)
     {
-        editor.setVisible(true);
-        this.invalidate();
+        SectionEditor editor = new SectionEditor();
     }
 }//GEN-LAST:event_ClickScheduleViewer
 
@@ -135,5 +134,4 @@ private void ClickScheduleViewer(java.awt.event.MouseEvent evt) {//GEN-FIRST:eve
     private keycow.scheduler.view.ScheduleViewer scheduleViewer1;
     // End of variables declaration//GEN-END:variables
 
-    private SectionEditor editor;
 }
