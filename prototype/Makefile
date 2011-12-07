@@ -8,7 +8,6 @@ main:
 	      src/keycow/scheduler/view/data/*.java \
 	      src/keycow/scheduler/view/generate/*.java \
 	      src/keycow/scheduler/view/*.java ; \
-	
 	cp src/keycow/scheduler/view/fake.png classes/keycow/scheduler/view/fake.png
 	
 jar:
