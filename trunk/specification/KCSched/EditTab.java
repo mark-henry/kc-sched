@@ -20,6 +20,6 @@ public abstract class EditTab {
 	public abstract void unpinSection();
 	
 	// Get/set a Section's properties
-	public abstract void getSection();
-	public abstract void setSection();
+	public abstract void readSection();
+	public abstract void modifySection();
 }
