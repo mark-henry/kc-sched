@@ -2,6 +2,7 @@ package keycow.scheduler.view.data;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.border.*;
 
 public class CoursesTab extends JPanel {
@@ -60,7 +61,24 @@ public class CoursesTab extends JPanel {
       
       JPanel row = new JPanel();
       row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
-      row.add(new JButton("Commit"));
+      
+      JButton cancel = new JButton("Cancel");
+      cancel.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent e) {
+            JOptionPane.showConfirmDialog(null, "Would you like to cancel?", "Confirm", JOptionPane.YES_NO_OPTION);
+         }
+      });
+      
+      JButton commit = new JButton("Commit");
+      commit.addActionListener(new ActionListener() {
+         public void actionPerformed(ActionEvent ci) {
+            JOptionPane.showConfirmDialog(null, "Commit and add new course?", "Commit", JOptionPane.YES_NO_OPTION);
+         }
+      });
+      
+      
+      row.add(cancel);
+      row.add(commit);
       row.add(new JButton("Restore"));
       courseDetails.add(row);
       
