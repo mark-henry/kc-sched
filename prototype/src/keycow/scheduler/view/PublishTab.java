@@ -27,7 +27,7 @@ public class PublishTab extends JPanel implements ActionListener{
       
       fChoose = new JFileChooser();
       fileNameField = new JTextField();
-      fChoose.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+      //fChoose.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
       
       //selectionButton = new JButton("Change Directories");
       exportButton = new JButton("Export");
