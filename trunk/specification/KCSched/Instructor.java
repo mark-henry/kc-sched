@@ -32,7 +32,7 @@ public abstract class Instructor {
    /** List of instructor's preferences */
    List<Preference> preferences;
    
-	
+	boolean isCurrent;
    /** Updates the instructor's WTU's.
     *
     * @param newWTUs The new amount of WTUs this instructor has.

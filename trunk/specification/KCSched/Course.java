@@ -12,6 +12,7 @@ public abstract class Course {
 	int NumUnits;
 	boolean IsLab;
 	boolean IsLecture;
+	boolean isCurrent;
 
 	
 
