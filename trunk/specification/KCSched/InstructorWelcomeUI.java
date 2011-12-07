@@ -8,7 +8,7 @@ public abstract class InstructorWelcomeUI {
      * @param preferences The updated Preferences to apply to the Instructor
      */
     /*@
-         requires instructor != null && preferences != null
+         requires instructor != null && preferences != null;
     @*/ 
     public abstract void editPreferences(Instructor instructor, Preferences preferences);
 
