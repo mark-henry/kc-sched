@@ -91,9 +91,13 @@ public abstract class GenerateSchedule {
        * @param Pref a rule that is to be added to the list.
        */
        
-      /*@ requires !(\exists Rule Pref; Violated.contains(Pref));
-        @ ensures (\exists Rule Pref; Violated.contains(Pref);)
-        @*/
+      /*@ 
+
+      requires !(Violated.contains(Pref));
+
+      ensures (Violated.contains(Pref));
+
+      @*/
       public abstract void addViolation(Rule Pref);
 	}
 	
@@ -113,8 +117,8 @@ public abstract class GenerateSchedule {
        * @return if there was an error the error code 0 otherwise
        */
 		/* added by cgaydosh 11/6 */
-		/*@ requires !(\exists Rule Pref; Preferences.contains(Pref));
-        @ ensures (\exists Rule Pref; Preferences.contains(Pref);)
+		/*@ requires !Preferences.contains(Pref);
+        @ ensures Preferences.contains(Pref);
         @*/ 
 		public abstract int UpdatePreference(Rule Pref);
 	
