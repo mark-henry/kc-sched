@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>
+2.7.  Details of Edit Commands
+</title>
+</head>
+<body bgcolor = white>
+<a name="Details of Edit Commands">
+<h3>
+2.7.  Details of Edit Commands
+</h3>
+</a>
+
+<a name="Undo and Redo">
+<h4>
+2.7.1.  Undo and Redo
+</h4>
+</a>
+</a>
+<p>
+When the user selects <tt>Undo</tt> from the <tt>Edit</tt> menu, the system
+undoes the effect of the most recently confirmed updating command.
+<p>
+When the user selects <tt>Redo</tt> from the <tt>Edit</tt> menu, the system undoes the effect of a previously executed <tt>Undo</tt> command.
+
+<a name="text editing">
+<a name="Cut, Copy, and Paste">
+<h4>
+2.7.2.  Cut, Copy, and Paste
+</h4>
+</a>
+</a>
+<p>
+<a name="clipboard">
+Operating systems typically provide a "clipboard" area through which cut and
+paste editing commands operate.
+</a>
+This clipboard holds values that are cut, copied, and pasted in tools such as
+the Schedule.  Hence, the <tt>Schedule</tt> <tt>Cut</tt>, <tt>Copy</tt>, and
+<tt>Paste</tt> commands operate through such a clipboard.
+<p>
+To execute the <tt>Cut</tt> or <tt>Copy</tt> command, the user must first
+select a segment of text in a text box.  Text selection is performed using
+click and drag with the mouse, or by other environment-specific means such as
+double or triple clicking in a text box.
+<p>
+After text selection, when the user selects the <tt>Cut</tt> command from the
+<tt>Edit</tt> menu, the system removes the selected text from the edit box and
+copies the text into the clipboard.  When the user selects the <tt>Copy</tt>
+command, the selected text is copied to the clipboard, but is not removed from
+the display in which it is selected and the text remains selected.  A
+particular segment of selected text is <em>unselected</em> by selecting another
+text segment or by single-clicking the mouse anywhere in the Scheduling display.
+<p>
+<a name="text cutting restrictions">
+The <tt>Cut</tt> command can only be executed in the context of a display where
+the text boxes are editable, i.e., where the user may type in the text boxes.
+</a>
+In contrast to <tt>Cut</tt>, the <tt>Copy</tt> command can be executed in any
+dialog in which text boxes appear, including read-only text boxes.
+<p>
+To execute the <tt>Paste</tt> command, the user must first execute a
+<tt>Cut</tt> or <tt>Copy</tt> and then place the typing cursor within some
+editable text box.  After these steps, when the user selects the <tt>Paste</tt>
+command from the <tt>Edit</tt> menu, the text stored in the clipboard is
+inserted at the point of the typing cursor, as if it had been entered by the
+user from the keyboard.  Pasted text appears in normal font, i.e., it is not
+highlighted as selected text.
+<p>
+If the user attempts to execute a <tt>Cut</tt> or <tt>Copy</tt> command without
+first selecting text, the commands have no effect.  If the user attempts to
+execute a <tt>Paste</tt> command without having executed either a <tt>Cut</tt>
+or <tt>Copy</tt>, the <tt>Paste</tt> command has no effect.  The <tt>Cut</tt>,
+<tt>Copy</tt>, and <tt>Paste</tt> commands operate only on plain text strings
+within a single displayed text box.  In particular, the commands do
+<em>not</em> apply to a scheduled item.
+
+
+<br>
+<br>
+<br>
+<br>
+<hr width=80% size=3>
+<center>
+<font size=-1>
+<font color=black> Prev: </font><a href="file.html">file</a>
+ | <font color=black> Next: </font><a href="help.html">help</a>
+ | <font color=black> Up: </font><a href="functional.html">functional</a>
+ | <font color=black> Top: </font><a href="../index.html">index</a></font>
+</center>
+<hr width=80% size=3>
+</body>
+</html>
