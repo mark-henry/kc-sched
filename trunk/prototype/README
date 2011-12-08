@@ -10,3 +10,10 @@ Mark Henry        Go to 'Edit' Tab
 
                   Go to 'Edit Tab
 				  Double-click on grid
+				  
+Andy Crafts		 Select Generate Tab -> Click on Generate on vertical axis
+				Click on the '==' button in the upper right (NOTE: I did not impliment the '==' button)
+					-> all sub menu items
+					-> 'about' prompt
+					-> exit prompt with working exit/cancel features
+		
