@@ -81,25 +81,32 @@ public class InstructorsTab extends JPanel {
        JPanel row = new JPanel();
        row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
        JButton preferences = new JButton("Preferences");
+      
        Object[] possibleValues = { "CPE 101", "CPE 102", "CPE 103", "CPE 141", "CPE 308" };
        preferences.addActionListener(new ActionListener() {
  		
-            public void actionPerformed(ActionEvent e)
-            {
-                /*JOptionPane.showInputDialog(null,
-    				"Choose one", "Input",
-					JOptionPane.INFORMATION_MESSAGE, null,
-					possibleValues, possibleValues[0]);*/
+          public void actionPerformed(ActionEvent e) {
 					
 				Object[] possibleValues = { "Test Schedule1", "Final Schedule Spring 11", "Final Schedule Fall 11", "Temp Schedule Winter 12", "Final Schedule Winter 12" };
+               
 				Object selectedValue = JOptionPane.showInputDialog(null,
 					"Choose a schedule", "Instructor Preferences",
 					JOptionPane.INFORMATION_MESSAGE, null,
 					possibleValues, possibleValues[0]);
+               
+             
+               if (selectedValue != null) {
+                  PreferencePane prefPane = new PreferencePane();
+                  prefPane.setVisible(true);
+               }
+               else 
+                  return;
+              
             }
+          
         }); 
-       
-       
+      
+      
        row.add(preferences);
        row.add(new JButton("Commit"));
        row.add(new JButton("Restore"));
