@@ -32,12 +32,14 @@ Nate Chamness 	Go to Data Tab -> go to course tab
 
 Bradley Zeller	Select Data tab
 		Select Instructors tab from the left
+		Implemented this entire window		
 
 		Select Generate tab
 		Select Schedules tab from the left
+		Implemented this entire window
 
 		Select Data tab
 		Select Instructors tab from the left
 		Select Preferences from the right window
 		Select "Ok" from the dialog window
-
+		Implemented this entire window (the "close" button works too!)
