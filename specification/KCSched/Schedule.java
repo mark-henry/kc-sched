@@ -11,7 +11,7 @@ public abstract class Schedule {
 	
 	/*@
 	ensures
-	    sections.contains(sec);
+		sections.contains(sec);
 	@*/
 	public abstract void add(Section sec);
 	

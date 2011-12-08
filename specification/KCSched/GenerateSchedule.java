@@ -25,7 +25,7 @@ public abstract class GenerateSchedule {
 	/* verifies validity of schedule. May be called in Generate function, or in
 	the edit schedule tab as well */
 	/*@
-	requires schedule.Sections.size() > 1 ;
+	requires schedule.sections.size() > 1 ;
 	
 	ensures 
 	(\forall Section sec_other; 
