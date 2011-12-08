@@ -100,7 +100,7 @@ public abstract class Data {
    /*@ requires id >= 0;
     @    
     @*/
-   public abstract void removeRoom(int id);
+   public abstract Room removeRoom(int id);
    
    
    /** Get an instructor from the database, with the specified id.
