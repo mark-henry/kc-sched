@@ -1,7 +1,8 @@
 /*Created by Acrafts 10/20*/
 package KCSched;
 
-import java.util.*;
+import java.util.Collection;
+
 /** This is a container for a schedule object. A Schedule is merely a collection of sections, with no conflicting
   * entries. See the GenerateSchedule class for a more complete view of schedule generation **/
 public abstract class Schedule {
@@ -26,8 +27,9 @@ public abstract class Schedule {
 	/*@
 	requires
 	    sections.contains(oldSec);
-    ensures
-	    !sections.contains(oldSec);
+   ensures
+      !sections.contains(oldSec)
+         &&
 		sections.contains(newSec);
 	@*/
 	public abstract void modify(Section oldSec, Section newSec);
