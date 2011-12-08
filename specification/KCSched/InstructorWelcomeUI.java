@@ -1,5 +1,7 @@
 package KCSched;
 
+import java.util.Collection;
+
 public abstract class InstructorWelcomeUI {
 
     /**
@@ -10,7 +12,7 @@ public abstract class InstructorWelcomeUI {
     /*@
          requires instructor != null && preferences != null;
     @*/ 
-    public abstract void editPreferences(Instructor instructor, Preferences preferences);
+    public abstract void editPreferences(Instructor instructor, Collection<Preference> preferences);
 
     /**
      * Retrieves the latest schedule from the database
