@@ -6,7 +6,8 @@ Team Member       Actions
 ===========================================================
 Chris Gaydosh     Select Generate tab
                   Select Components tab
-                  Select Publish tab
+                  
+		  Select Publish tab
                   Click on the export button
                   
 Mark Henry        Go to 'Edit' Tab
@@ -28,3 +29,15 @@ Nate Chamness 	Go to Data Tab -> go to course tab
 				In course tab click 'cancel' button for additional prompt
 				In course tab click 'confirm' button for additional prompt
 				the '==' button frame work for the menu in the upper right (NOTE: I did not implement the submenu items)
+
+Bradley Zeller	Select Data tab
+		Select Instructors tab from the left
+
+		Select Generate tab
+		Select Schedules tab from the left
+
+		Select Data tab
+		Select Instructors tab from the left
+		Select Preferences from the right window
+		Select "Ok" from the dialog window
+
