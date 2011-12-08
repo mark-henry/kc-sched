@@ -24,3 +24,8 @@ Andy Crafts		 Select Generate Tab -> Click on Generate on vertical axis
 John Lokker		Go to Data Tab
 				Go to Rooms Tab
 				button functionality
+				
+Nate Chamness 	Go to Data Tab -> go to course tab
+				In course tab click 'cancel' button for additional prompt
+				In course tab click 'confirm' button for additional prompt
+				the '==' button frame work for the menu in the upper right (NOTE: I did not implement the submenu items)
