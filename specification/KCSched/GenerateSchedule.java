@@ -2,12 +2,13 @@
 package KCSched;
 
 import java.util.*;
+	/** generates a schedule based on the inputted instructors, rooms, courses,
+	preferences, and conflict resoultion settings **/
 public abstract class GenerateSchedule {
 	
 	/*Created by Acrafts 10/20*/
-	/* generates a schedule based on the inputted instructors, rooms, courses,
-	preferences, and conflict resoultion settings */
-	
+
+	/** generates schedule based on the collections of data that have been imported **/
 	/*@
 	requires 	instructors !=  null && instructors.size() > 0 &&
 				rooms !=  null && rooms.size() > 0 &&
@@ -48,20 +49,27 @@ public abstract class GenerateSchedule {
 	/*Created by Acrafts 10/20*/
 	public abstract class Components{
 		/*data fields for schedule generation*/
+		/** Collection of instructors for the quarter that the schedule is to be generated for**/
 		Collection<Instructor> Instructors;
+		/** Collection of room for the quarter that the schedule is to be generated for**/
 		Collection<Room> Rooms;
+		/** Collection of courses for the quarter that the schedule is to be generated for**/
 		Collection<Course> Courses;
 		
+		
+		/** Imports all current instructors **/
 		/*@
 		ensures \forall Instructor instructor; instructor.isCurrent == true; Instructors.contains(instructor);
 		@*/
 		public abstract int ImportAllCurrentInstructors();
 		
+		/** Imports all current rooms **/
 		/*@
 		ensures \forall Room room; room.isCurrent == true; Rooms.contains(room);
 		@*/
 		public abstract int ImportAllCurrentRooms();
 		
+		/** Imports all current courses **/
 		/*@
 		ensures \forall Course course; course.isCurrent == true; Courses.contains(course);
 		@*/
