@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Developer Overview</title>
+
+  
+</head><body>
+<h2><a name="Functional Requirements"></a>2. Developer Overview<br>
+</h2>
+<br>
+<big style="font-weight: bold;">Major Objects</big><br>
+Schedule - Container of many sections which organizes all of them on a grid layout.<br>
+Section - Container of information to be placed in a schedule.&nbsp; Can be edited individually or moved as a whole object.<br>
+Instructor - Information on an instructor, including: name, phone number,&nbsp; office and preferences.<br>
+Course - Information on a course, including: name, number, department and units.<br>
+Room - Information on a room, including: building and room number, capacity, lab stations and key features in the room.<br>
+<br>
+<big style="font-weight: bold;">Major Operations</big><br>
+Adding / Removing Instructor, Course and Room Information<br>
+Magic Generate Button<br>
+Editing of generated schedule<br>
+Exporting a generated schedule<br>
+<br>
+The hardest part to implement should be the editing of a generated
+schedule.&nbsp; To allow the user a drag and drop functionality, the
+ability to pin some sections so they can not be moved and the ability
+to refactor the schedule around those pinned sections will all require
+a great deal of work.&nbsp; Also, throughout the whole process the
+validity check needs to run so that any change a user makes is checked
+against the rest of the schedule to see if that change can work.<br>
+<br>
+<big style="font-weight: bold;">Structure</big><br>
+Each schedule is composed of many sections.&nbsp; Each section is in
+turn composed of one instructor, one course, one room, and a set of
+time information.&nbsp; All of the information contained within a
+section is editable from the schedule and doing so will only edit the
+preferences or information saved to that schedule.&nbsp; If a user
+wants to edit the permanent data they can do so in the data tab.&nbsp;
+This allows for easy distinction between permanent and temporary data
+management.&nbsp; <br>
+<br>
+<br>
+<br>
+
+
+<hr size="3" width="80%">
+<center><font size="-1"><font color="black"> Prev: Non-Functional Requirements</font> | <font color="black"> Next: </font>Formal Specification
+| <font color="black">
+Up: </font><a href="index.html">Requirements</a> | <font color="black">
+Top:
+</font><a href="../index.html">Index</a></font>
+</center>
+
+<hr size="3" width="80%">
+</body></html>
