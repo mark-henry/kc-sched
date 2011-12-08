@@ -16,8 +16,7 @@ public abstract class Export {
     * @return 0 if successful or an error code if there was an error
     */
   /*@
-      requires ((dir != null) && (sched != null))
-      ensures 
+      requires ((dir != null) && (sched != null));
    @*/
   public abstract int exportTo(Schedule sched, String dir);
    
